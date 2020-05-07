@@ -89,3 +89,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // ReactDom.render(<App />,document.getElementById("root"))
 import React from 'react'
 ReactDom.render(<App />,document.getElementById("root"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

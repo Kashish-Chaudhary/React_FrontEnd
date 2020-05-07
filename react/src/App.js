@@ -2,8 +2,9 @@ import React , {Component} from 'react';
  import ReactDom from 'react-dom'
  import { Navbar} from 'reactstrap';
  import { NavbarBrand} from 'reactstrap'
+ import Menu from './Components/MenuComponent'
 class App extends Component{
-  
+
 
 
   render(){
@@ -14,6 +15,7 @@ class App extends Component{
             <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
             </div>
             </Navbar>
+            <Menu/>
             </div>
         )
     }
