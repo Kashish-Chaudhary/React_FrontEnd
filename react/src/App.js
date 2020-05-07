@@ -1,4 +1,27 @@
 import React , {Component} from 'react';
+ import ReactDom from 'react-dom'
+ import { Navbar} from 'reactstrap';
+ import { NavbarBrand} from 'reactstrap'
+class App extends Component{
+  
+
+
+  render(){
+        return(
+            <div>
+            <Navbar dark color="primary">
+            <div className="container">
+            <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
+            </div>
+            </Navbar>
+            </div>
+        )
+    }
+}
+
+export default App;
+
+
 // import Person from './person'
 // import Daa from './daa'
 // let person=[
@@ -77,56 +100,24 @@ class App extends Component{
         )
     }
 }
-        
+increment=()=>{
+   this.setState({
+       val:this.state.val+1
+   })
+}
+
+decrement=()=>{
+   this.setState({
+       val:this.state.val-1
+   })
+}
+
+Input=(e)=>{
+
+    this.setState({
+        val:Number(e.target.value)
+    })
+}
 
 export default App;*/
 // import React from 'react';
-class App extends Component{
-    constructor(){
-        super()
-        this.state={
-            val:1
-        }
-         this.increment = this.increment.bind(this);
-         this.decrement = this.decrement.bind(this);
-         this.Input = this.Input.bind(this);
-    }
-
-    increment=()=>{
-       this.setState({
-           val:this.state.val+1
-       })
-    }
-
-    decrement=()=>{
-       this.setState({
-           val:this.state.val-1
-       })
-    }
-
-    Input=(e)=>{
-        
-        this.setState({
-            val:Number(e.target.value)
-        })
-    }
-    render(){
-        return(
-            <div>
-        
-               <button onClick={this.increment}>Increment</button>
-
-               <h1>
-                   {this.state.val}
-               </h1>
-               <button onClick={this.decrement}>Decrement</button>
-               <br></br><br></br><input onChange={this.Input.bind(this)}>
-
-               </input>
-
-            </div>
-        )
-    }
-}
-
-export default App;

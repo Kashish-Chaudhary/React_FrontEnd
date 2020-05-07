@@ -2,7 +2,7 @@
 //  import ReactDom from 'react-dom'
 // import React,{Component} from 'react'
 // const element=React.createElement
-// ('h1',null,'helloworld'); 
+// ('h1',null,'helloworld');
 
 
 // const ol=React.createElement('ol',null,
@@ -60,11 +60,11 @@ class List extends Component{
     render()
     {
         return <ol>
-                
+
                     <li>{this.props.tasks[0]}</li>
                     <li>{this.props.tasks[1]}</li>
                     <li>{this.props.tasks[2]}</li>
-                    
+
              </ol>
     }
 }
@@ -85,7 +85,7 @@ ReactDom.render(<Main/>,document.getElementById('root'));
 // import React from 'react';
 import ReactDom from 'react-dom';
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
 // ReactDom.render(<App />,document.getElementById("root"))
 import React from 'react'
 ReactDom.render(<App />,document.getElementById("root"))
-

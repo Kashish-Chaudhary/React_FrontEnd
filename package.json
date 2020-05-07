@@ -4,13 +4,14 @@
   "description": "\"this is a test directory to learn\"",
   "main": "index.js",
   "scripts": {
-    "start":"npm run lite",
+    "start": "npm run lite",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lite":"lite-server"
+    "lite": "lite-server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lite-server": "^2.5.4"
+    "lite-server": "^2.5.4",
+    "nodemon": "^2.0.3"
   }
 }
