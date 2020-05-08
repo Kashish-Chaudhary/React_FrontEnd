@@ -3,8 +3,15 @@ import React , {Component} from 'react';
  import { Navbar} from 'reactstrap';
  import { NavbarBrand} from 'reactstrap'
  import Menu from './Components/MenuComponent'
+import { DISHES } from './shared/dishes'
 class App extends Component{
 
+    constructor(props){
+      super(props);
+      this.state={
+        dishes:DISHES
+      };
+    }
 
 
   render(){
@@ -12,10 +19,10 @@ class App extends Component{
             <div>
             <Navbar dark color="primary">
             <div className="container">
-            <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
+            <NavbarBrand href="/">Ristorante ConFusion</NavbarBrand>
             </div>
             </Navbar>
-            <Menu/>
+            <Menu dishes={this.state.dishes}/>
             </div>
         )
     }
