@@ -1,15 +1,31 @@
 
-import React,{ Component } from 'react'
+import React from 'react'
 // import {Media} from 'reactstrap'
-import {Card,CardImg,CardImgOverlay,CardText,CardBody,CardTitle} from 'reactstrap'
+import {Card,CardImg,CardText,CardBody,CardTitle} from 'reactstrap'
 
-class DishDetail extends Component{
-  constructor(props){
-    super(props);
+ function RenderDish({dish}){
+  return (
 
+
+    <div className="col-lg-5 col-md-5 col-sm-12 m-1">
+
+    <Card>
+        <CardImg width="100%"  src={dish.image} alt={dish.name}/>
+        <CardBody>
+          <CardTitle>{dish.name}</CardTitle>
+          <CardText>{dish.description}</CardText>
+        </CardBody>
+      </Card>
+
+
+
+
+   </div>
+
+
+  );
 }
-
-renderComments(comments)
+function RenderComments({comments})
 {var month=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
  const com = comments.map((comment)=> {
@@ -28,36 +44,20 @@ return (
    </div>
 )
 }
-  render(){
-  //  console.log("props             "+this.props.dish);
-  // {console.log(month[parseInt(comment.date.substr(5,2))-1])}
-
-if(this.props.dish!=null){
-    return (
-<div className="container">
-<div className="row">
-      <div className="col-lg-5 col-md-5 col-sm-12 m-1">
-
-      <Card>
-          <CardImg width="100%"  src={this.props.dish.image} alt={this.props.dish.name}/>
-          <CardBody>
-            <CardTitle>{this.props.dish.name}</CardTitle>
-            <CardText>{this.props.dish.description}</CardText>
-          </CardBody>
-        </Card>
-
-     </div>
-
-     {this.renderComments(this.props.dish.comments)}
-     </div>
-     </div>
-
-    );
+  const DishDetail= (props) =>{
+if(props.dish!=null){
+  return(<div className="container">
+  <div className="row">
+    <RenderDish dish={props.dish}/>
+    <RenderComments comments={props.dish.comments}/>
+    </div>
+</div>
+);
   }
 
   else return(
     <div></div>
   );
   }
-}
+
 export default DishDetail;
