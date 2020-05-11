@@ -1,3 +1,4 @@
+
 import React,{ Component } from 'react'
 // import {Media} from 'reactstrap'
 import {Card,CardImg,CardImgOverlay,CardText,CardBody,CardTitle} from 'reactstrap'
@@ -33,7 +34,7 @@ return (
 
 if(this.props.dish!=null){
     return (
-
+<div className="container">
 <div className="row">
       <div className="col-lg-5 col-md-5 col-sm-12 m-1">
 
@@ -48,6 +49,7 @@ if(this.props.dish!=null){
      </div>
 
      {this.renderComments(this.props.dish.comments)}
+     </div>
      </div>
 
     );
