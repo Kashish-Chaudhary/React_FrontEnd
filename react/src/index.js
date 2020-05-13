@@ -86,6 +86,8 @@ ReactDom.render(<Main/>,document.getElementById('root'));
 import ReactDom from 'react-dom';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css'
+import 'bootstrap-social/bootstrap-social.css'
 // ReactDom.render(<App />,document.getElementById("root"))
 import React from 'react'
 ReactDom.render(<App />,document.getElementById("root"))
